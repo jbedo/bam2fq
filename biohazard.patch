@@ -1,5 +1,31 @@
+diff --git a/Bio/Bam/Regions.hs b/Bio/Bam/Regions.hs
+index 43992f7..ea20144 100644
+--- a/Bio/Bam/Regions.hs
++++ b/Bio/Bam/Regions.hs
+@@ -9,7 +9,7 @@ module Bio.Bam.Regions
+     ) where
+ 
+ import Bio.Bam.Header ( Refseq(..) )
+-import Bio.Prelude hiding ( toList )
++import Bio.Prelude hiding ( toList, fromList )
+ 
+ import qualified Data.IntMap.Strict as IM
+ 
+diff --git a/Bio/Streaming/Bytes.hs b/Bio/Streaming/Bytes.hs
+index 0651278..7f3454a 100644
+--- a/Bio/Streaming/Bytes.hs
++++ b/Bio/Streaming/Bytes.hs
+@@ -118,7 +118,7 @@ module Bio.Streaming.Bytes (
+ 
+   ) where
+ 
+-import Bio.Prelude                      hiding (break,concat,drop,dropWhile,lines,splitAt,writeFile,empty,loop)
++import Bio.Prelude                      hiding (break,concat,drop,dropWhile,lines,splitAt,writeFile,empty,loop,hGetContents)
+ import Data.ByteString.Builder.Internal
+         (Builder,builder,runBuilder,runBuilderWith,bufferSize
+         ,AllocationStrategy,ChunkIOStream(..),buildStepToCIOS
 diff --git a/Control/Monad/Log.hs b/Control/Monad/Log.hs
-index 5b6598a..de4589f 100644
+index 74d8553..47a8a38 100644
 --- a/Control/Monad/Log.hs
 +++ b/Control/Monad/Log.hs
 @@ -14,7 +14,7 @@ module Control.Monad.Log

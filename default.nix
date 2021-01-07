@@ -5,8 +5,8 @@ let
     ghc.withPackages (pkgs:
       with pkgs; [
         optparse-applicative
-        streaming-with
-        streaming-utils
+        (doJailbreak (markUnbroken streaming-with))
+        (doJailbreak (markUnbroken streaming-utils))
         streaming-bytestring
         (doJailbreak (markUnbroken
           (biohazard.overrideAttrs (_: { patches = [ ./biohazard.patch ]; }))))
