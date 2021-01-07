@@ -1,0 +1,13 @@
+diff --git a/Control/Monad/Log.hs b/Control/Monad/Log.hs
+index 5b6598a..de4589f 100644
+--- a/Control/Monad/Log.hs
++++ b/Control/Monad/Log.hs
+@@ -14,7 +14,7 @@ module Control.Monad.Log
+     , panic
+     ) where
+ 
+-import BasePrelude           hiding ( try, catchIOError )
++import BasePrelude           hiding ( try, catchIOError, option )
+ import Control.Monad.Base           ( MonadBase(..) )
+ import Control.Monad.Catch
+ import Control.Monad.Primitive
